@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070914">
+<meta name="description" content="عيدية رقمية مهداة من عبد الحميد أبو لين — تقبّل الله منّا ومنكم">
+
+<title>عيدية ⋅ عبد الحميد أبو لين</title>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="عيدية">
+<meta property="og:url" content="https://canvasframesa-lang.github.io/eid-mubarak/abdulhamid/">
+<meta property="og:title" content="عيدية من عبد الحميد أبو لين ✦ عيدٌ مبارك">
+<meta property="og:description" content="تقبَّل الله منّا ومنكم صالح الأعمال ✦ وكلُّ عامٍ وأنتم بخير">
+<meta property="og:image" content="https://canvasframesa-lang.github.io/eid-mubarak/abdulhamid/og.jpg">
+<meta property="og:image:secure_url" content="https://canvasframesa-lang.github.io/eid-mubarak/abdulhamid/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="عيد مبارك — عيدية من عبد الحميد أبو لين">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="عيدية من عبد الحميد أبو لين ✦ عيدٌ مبارك">
+<meta name="twitter:description" content="تقبَّل الله منّا ومنكم صالح الأعمال ✦ وكلُّ عامٍ وأنتم بخير">
+<meta name="twitter:image" content="https://canvasframesa-lang.github.io/eid-mubarak/abdulhamid/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%23f4d56e'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Cosmic ground */
+    --bg-0: #050714;
+    --bg-1: #0a0e27;
+    --bg-2: #15082a;
+
+    /* Gold scale — premium */
+    --gold-hi:  #fff8d8;
+    --gold-1:   #ffe7a3;
+    --gold-2:   #f4d06b;
+    --gold-3:   #d4a93a;
+    --gold-4:   #b88a1e;
+    --gold-5:   #8a6817;
+    --gold-deep: #4a2c0a;
+    --gold-glow: rgba(212, 169, 58, 0.55);
+    --gold-grad:  linear-gradient(180deg, #fff8d8 0%, #f4d06b 35%, #d4a93a 70%, #8a6817 100%);
+    /* Shimmer kept all-gold so it stays visible against the white glass */
+    --gold-shim:  linear-gradient(90deg, #8a6817 0%, #b88a1e 25%, #f4d06b 50%, #b88a1e 75%, #8a6817 100%);
+
+    /* Text — outside glass (sender ribbon header) */
+    --ink-light: #ebd9b0;
+    --ink-soft:  #cbd3f0;
+    --ink-dim:   #6a72a0;
+
+    /* Text — inside white glass (must be dark for readability) */
+    --ink-body:  #1a1738;   /* deep midnight navy */
+    --ink-deep:  #0f0a25;   /* near-black ink */
+    --ink-mute:  #4a4773;
+    --gold-text: #8a6817;   /* deep gold for accents on white */
+
+    /* Glass */
+    --glass-tint: rgba(244, 208, 107, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { background: var(--bg-0); color: var(--ink-light); }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Reem Kufi', sans-serif;
+    min-height: 100vh;
+    overscroll-behavior-y: contain;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ Black space — cheerful with warm nebula touches ============ */
+  .cosmos {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      /* Warm golden nebula in upper-left for cheerfulness */
+      radial-gradient(ellipse 55% 45% at 22% 18%, rgba(244, 208, 107, 0.16) 0%, rgba(244, 208, 107, 0.05) 35%, transparent 70%),
+      /* Soft champagne glow lower-right */
+      radial-gradient(ellipse 50% 40% at 78% 85%, rgba(212, 169, 58, 0.12) 0%, transparent 65%),
+      /* Subtle violet tint behind the card for depth */
+      radial-gradient(ellipse 60% 40% at 50% 45%, rgba(40, 18, 80, 0.35) 0%, transparent 70%),
+      /* Soft cyan distant star cluster */
+      radial-gradient(ellipse 30% 20% at 85% 25%, rgba(120, 180, 255, 0.06) 0%, transparent 70%),
+      /* Pure black base */
+      #020207;
+  }
+  #stars, #particles {
+    position: fixed; inset: 0; z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ============ Watermark ============ */
+  .watermark {
+    position: fixed;
+    top: max(14px, env(safe-area-inset-top));
+    left: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--ink-dim);
+    opacity: 0.55;
+    z-index: 5;
+    text-transform: uppercase;
+  }
+  .watermark .dot {
+    display: inline-block;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold-2);
+    box-shadow: 0 0 8px var(--gold-2);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* ============ Page container ============ */
+  main {
+    position: relative;
+    z-index: 2;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 48px 16px 80px;
+  }
+
+  /* ============ Glass Card — White Frosted ============ */
+  .glass-card {
+    position: relative;
+    border-radius: 36px;
+    padding: 56px 32px 44px;
+    overflow: hidden;
+    text-align: center;
+
+    /* White frosted glass — high opacity for readability over cosmic background */
+    background:
+      radial-gradient(ellipse at 18% 8%, rgba(255, 255, 255, 0.88) 0%, rgba(255, 253, 245, 0.78) 55%, transparent 90%),
+      radial-gradient(ellipse at 88% 92%, rgba(244, 208, 107, 0.35) 0%, transparent 60%),
+      linear-gradient(155deg,
+        rgba(255, 255, 255, 0.78) 0%,
+        rgba(252, 248, 235, 0.72) 45%,
+        rgba(244, 208, 107, 0.42) 100%);
+    backdrop-filter: blur(28px) saturate(1.4) brightness(1.04);
+    -webkit-backdrop-filter: blur(28px) saturate(1.4) brightness(1.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      inset 0 -1px 0 rgba(184, 138, 30, 0.35),
+      0 30px 80px rgba(0, 0, 0, 0.55),
+      0 0 80px rgba(244, 208, 107, 0.22),
+      0 0 140px rgba(255, 255, 255, 0.08);
+    animation: rise 1s cubic-bezier(.16,1,.3,1) 0.1s both;
+  }
+  .glass-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 14%; right: 14%; height: 1px;
+    background: linear-gradient(90deg,
+      transparent, rgba(255, 255, 255, 0.98), transparent);
+    pointer-events: none;
+  }
+  .glass-card::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 35%; right: 35%; height: 1px;
+    background: linear-gradient(90deg,
+      transparent, rgba(184, 138, 30, 0.4), transparent);
+    pointer-events: none;
+  }
+
+  /* Corner ornaments — gold lines */
+  .corner {
+    position: absolute;
+    width: 38px; height: 38px;
+    border: 1.5px solid rgba(184, 138, 30, 0.55);
+    pointer-events: none;
+  }
+  .corner.tl { top: 14px; right: 14px; border-left: none; border-bottom: none; border-top-right-radius: 12px; }
+  .corner.tr { top: 14px; left: 14px;  border-right: none; border-bottom: none; border-top-left-radius: 12px; }
+  .corner.bl { bottom: 14px; right: 14px; border-left: none; border-top: none; border-bottom-right-radius: 12px; }
+  .corner.br { bottom: 14px; left: 14px;  border-right: none; border-top: none; border-bottom-left-radius: 12px; }
+
+  /* ============ Royal crown ============ */
+  .crown-emblem {
+    width: clamp(70px, 16vw, 100px);
+    margin: 0 auto 14px;
+    filter:
+      drop-shadow(0 4px 12px rgba(212, 169, 58, 0.45))
+      drop-shadow(0 0 16px rgba(244, 208, 107, 0.3));
+    animation: rise 1s cubic-bezier(.16,1,.3,1) both;
+  }
+  .crown-emblem svg { display: block; width: 100%; height: auto; }
+
+  /* ============ Bismillah ============ */
+  .bismillah {
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    font-size: clamp(15px, 3.4vw, 19px);
+    background: var(--gold-shim);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 6px 0 22px;
+    letter-spacing: 1px;
+    animation: shimmer 6s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(244, 208, 107, 0.3));
+  }
+
+  /* ============ Sender ribbon ============ */
+  .from-ribbon {
+    margin-bottom: 22px;
+  }
+  .from-ribbon .lbl {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 7px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .from-ribbon .lbl::before,
+  .from-ribbon .lbl::after {
+    content: '✦';
+    margin: 0 8px;
+    color: var(--gold-3);
+    opacity: 0.5;
+    font-size: 8px;
+  }
+  .from-ribbon .name {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: clamp(20px, 4.5vw, 28px);
+    font-weight: 700;
+    background: var(--gold-shim);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s linear infinite;
+    filter: drop-shadow(0 1px 6px rgba(212, 169, 58, 0.35));
+  }
+
+  /* ============ Rotating Glass Mandala (Islamic shapes) ============ */
+  .mandala-wrap {
+    position: relative;
+    width: min(74vw, 340px);
+    aspect-ratio: 1;
+    margin: 4px auto 28px;
+    animation: rise 1.2s cubic-bezier(.16,1,.3,1) 0.25s both;
+  }
+  .mandala-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -50px;
+    background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(244, 208, 107, 0.35) 28%,
+      rgba(212, 169, 58, 0.15)  52%,
+      rgba(255, 255, 255, 0)    72%);
+    filter: blur(28px);
+    z-index: -1;
+    pointer-events: none;
+    animation: halo-pulse 5s ease-in-out infinite;
+  }
+  @keyframes halo-pulse {
+    0%, 100% { transform: scale(1);    opacity: 0.9; }
+    50%      { transform: scale(1.08); opacity: 1; }
+  }
+
+  .mandala-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+  .mandala-layer svg {
+    width: 100%; height: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+  /* Three layers — each rotates at a different speed/direction */
+  .mandala-layer.l1 { animation: m-spin 42s linear infinite;          }   /* outer pearl ring CW slow */
+  .mandala-layer.l2 { animation: m-spin 28s linear infinite reverse; }   /* 12-petal rosette CCW */
+  .mandala-layer.l3 { animation: m-spin 18s linear infinite;          }   /* inner octagon CW fast */
+  .mandala-layer.l4 { animation: m-spin 60s linear infinite reverse; }   /* hairline ring marks */
+  @keyframes m-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+  /* Static glass shine overlay (does NOT rotate, like real light) */
+  .mandala-shine {
+    position: absolute;
+    inset: 4%;
+    border-radius: 50%;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.15) 25%, transparent 55%),
+      radial-gradient(ellipse at 70% 80%, rgba(244,208,107,0.18) 0%, transparent 60%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.85;
+  }
+
+  /* Static center text */
+  .mandala-center {
+    position: absolute;
+    inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    z-index: 6;
+  }
+  .mandala-center .m-id {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(9px, 1.7vw, 12px);
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: var(--gold-text);
+    margin-bottom: 4px;
+    opacity: 0.85;
+  }
+  .mandala-center .m-eid {
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1;
+    background: linear-gradient(180deg, #8a6817 0%, #b88a1e 35%, #f4d06b 65%, #b88a1e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 3px rgba(255,255,255,0.6));
+  }
+  .mandala-center .m-hjri {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: clamp(10px, 1.9vw, 13px);
+    color: var(--gold-text);
+    margin-top: 4px;
+    letter-spacing: 3px;
+    opacity: 0.85;
+  }
+
+  /* ============ Hero title ============ */
+  .hero {
+    margin-bottom: 12px;
+  }
+  .label-small {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 8px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: 700;
+    font-size: clamp(56px, 13vw, 92px);
+    line-height: 1;
+    background: var(--gold-shim);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px rgba(244, 208, 107, 0.25);
+    margin: 6px 0 8px;
+    animation: shimmer 5s linear infinite;
+    filter: drop-shadow(0 2px 12px rgba(244, 208, 107, 0.35));
+  }
+  @keyframes shimmer {
+    0%   { background-position: 200% 50%; }
+    100% { background-position: -200% 50%; }
+  }
+  .subtitle {
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: clamp(15px, 3.4vw, 19px);
+    color: var(--gold-text);
+    opacity: 0.95;
+  }
+
+  /* ============ Divider ============ */
+  .divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px;
+    margin: 30px 0 26px;
+  }
+  .divider .ln {
+    width: clamp(70px, 22vw, 130px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-3), transparent);
+  }
+  .divider .star {
+    color: var(--gold-2);
+    font-size: 14px;
+    filter: drop-shadow(0 0 8px var(--gold-2));
+  }
+
+  /* ============ Letter content ============ */
+  .salam {
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: 400;
+    font-size: clamp(17px, 4vw, 23px);
+    color: var(--gold-text);
+    margin: 4px 0 18px;
+    letter-spacing: 1px;
+  }
+  .greeting-line {
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(14px, 3.1vw, 17px);
+    color: var(--gold-text);
+    margin: 6px 0 28px;
+    opacity: 0.95;
+  }
+
+  .stanza {
+    font-family: 'Amiri', serif;
+    font-size: clamp(16px, 3.7vw, 20px);
+    line-height: 2;
+    color: var(--ink-body);
+    margin: 0 auto 8px;
+    max-width: 560px;
+    padding: 0 6px;
+  }
+  .stanza strong {
+    background: linear-gradient(90deg, #8a6817 0%, #b88a1e 30%, #d4a93a 50%, #b88a1e 70%, #8a6817 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    animation: shimmer 7s linear infinite;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.6));
+  }
+  .stanza em {
+    font-style: normal;
+    color: var(--gold-text);
+    font-weight: 700;
+  }
+
+  .stanza-sep {
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px;
+    margin: 26px 0;
+    color: var(--gold-text);
+    opacity: 0.75;
+  }
+  .stanza-sep::before, .stanza-sep::after {
+    content: '';
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+  }
+  /* 8-pointed star SVG separator */
+  .stanza-sep svg {
+    width: 16px; height: 16px;
+    filter: drop-shadow(0 0 4px rgba(184, 138, 30, 0.5));
+  }
+
+  /* Final flourish */
+  .flourish {
+    margin-top: 36px;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: clamp(22px, 5.2vw, 32px);
+    background: var(--gold-shim);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    animation: shimmer 6s linear infinite;
+    filter: drop-shadow(0 0 14px rgba(244, 208, 107, 0.3));
+  }
+
+  /* ============ Mosque ============ */
+  .mosque-art {
+    margin: 36px auto 12px;
+    width: 100%; max-width: 440px;
+    display: block;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 14px rgba(244, 208, 107, 0.12));
+  }
+
+  /* ============ Signature ============ */
+  .signature {
+    margin-top: 28px;
+    padding: 28px 0 4px;
+    border-top: 1px solid rgba(244, 208, 107, 0.20);
+    position: relative;
+  }
+  .signature::before {
+    content: '✦';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 10, 35, 0.9);
+    color: var(--gold-2);
+    padding: 0 12px;
+    font-size: 12px;
+    filter: drop-shadow(0 0 8px var(--gold-2));
+  }
+  .signature .lbl {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .signature .name {
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 6.2vw, 38px);
+    background: var(--gold-shim);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+    filter: drop-shadow(0 2px 10px rgba(244, 208, 107, 0.4));
+  }
+  .signature .ornament {
+    color: var(--gold-3);
+    margin-top: 14px;
+    font-size: 12px;
+    letter-spacing: 10px;
+    opacity: 0.7;
+  }
+
+  /* ============ Lanterns ============ */
+  .lantern { position: fixed; z-index: 2; pointer-events: none; transform-origin: top center; opacity: 0.9; }
+  .lantern svg { display: block; filter: drop-shadow(0 0 14px rgba(244, 208, 107, 0.6)); }
+  .lantern.l1 { top: 5%;  left: 3%;  width: 60px; animation: sway 4.5s ease-in-out infinite; }
+  .lantern.l2 { top: 10%; right: 4%; width: 50px; animation: sway 5.5s ease-in-out infinite reverse; }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50%      { transform: rotate(3deg); }
+  }
+
+  /* ============ Entrance ============ */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============ Mobile tuning ============ */
+  @media (max-width: 480px) {
+    main { padding: 40px 12px 60px; }
+    .glass-card { padding: 44px 20px 36px; border-radius: 28px; }
+    .corner { width: 28px; height: 28px; }
+    .lantern.l1 { width: 46px; }
+    .lantern.l2 { width: 38px; }
+    .stanza { line-height: 1.95; }
+  }
+  @media (max-width: 380px) {
+    .lantern { display: none; }
+    .from-ribbon .lbl::before,
+    .from-ribbon .lbl::after { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001s !important;
+      transition-duration: 0.2s !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="cosmos"></div>
+<canvas id="stars"></canvas>
+<canvas id="particles"></canvas>
+
+<div class="watermark"><span class="dot"></span>EID · 1447 H</div>
+
+<div class="lantern l1">
+  <svg viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="0" x2="30" y2="18" stroke="#d4a93a" stroke-width="1.5"/>
+    <rect x="22" y="16" width="16" height="6" fill="#d4a93a"/>
+    <path d="M 15 26 Q 30 22 45 26 L 48 68 Q 30 76 12 68 Z" fill="url(#lg1)" stroke="#d4a93a" stroke-width="1.5"/>
+    <line x1="20" y1="32" x2="20" y2="62" stroke="#8a6817" stroke-width="0.6"/>
+    <line x1="30" y1="30" x2="30" y2="66" stroke="#8a6817" stroke-width="0.6"/>
+    <line x1="40" y1="32" x2="40" y2="62" stroke="#8a6817" stroke-width="0.6"/>
+    <rect x="22" y="66" width="16" height="6" fill="#d4a93a"/>
+    <line x1="30" y1="72" x2="30" y2="88" stroke="#d4a93a" stroke-width="1"/>
+    <path d="M 26 88 Q 30 96 34 88" fill="none" stroke="#d4a93a" stroke-width="1.5"/>
+    <defs>
+      <radialGradient id="lg1" cx="50%" cy="40%">
+        <stop offset="0%" stop-color="#fff8d8" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#d4a93a" stop-opacity="0.6"/>
+      </radialGradient>
+    </defs>
+  </svg>
+</div>
+<div class="lantern l2">
+  <svg viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="0" x2="30" y2="18" stroke="#d4a93a" stroke-width="1.5"/>
+    <rect x="22" y="16" width="16" height="6" fill="#d4a93a"/>
+    <path d="M 15 26 Q 30 22 45 26 L 48 68 Q 30 76 12 68 Z" fill="url(#lg2)" stroke="#d4a93a" stroke-width="1.5"/>
+    <rect x="22" y="66" width="16" height="6" fill="#d4a93a"/>
+    <line x1="30" y1="72" x2="30" y2="88" stroke="#d4a93a" stroke-width="1"/>
+    <path d="M 26 88 Q 30 96 34 88" fill="none" stroke="#d4a93a" stroke-width="1.5"/>
+    <defs>
+      <radialGradient id="lg2" cx="50%" cy="40%">
+        <stop offset="0%" stop-color="#fff8d8" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#d4a93a" stop-opacity="0.6"/>
+      </radialGradient>
+    </defs>
+  </svg>
+</div>
+
+<main>
+
+  <div class="glass-card">
+
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+
+    <!-- Royal crown emblem -->
+    <div class="crown-emblem">
+      <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="crownGrad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%"  stop-color="#fff8d8"/>
+            <stop offset="40%" stop-color="#f4d06b"/>
+            <stop offset="75%" stop-color="#d4a93a"/>
+            <stop offset="100%" stop-color="#8a6817"/>
+          </linearGradient>
+        </defs>
+        <!-- Crown base -->
+        <path d="M 18 42 L 102 42 L 96 52 L 24 52 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.6"/>
+        <!-- Crown band ornament -->
+        <circle cx="36" cy="47" r="2" fill="#8a6817"/>
+        <circle cx="60" cy="47" r="2.4" fill="#8a6817"/>
+        <circle cx="84" cy="47" r="2" fill="#8a6817"/>
+        <!-- Five spires -->
+        <path d="M 18 42 L 22 22 L 30 42 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.5"/>
+        <path d="M 32 42 L 42 14 L 52 42 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.5"/>
+        <path d="M 52 42 L 60 4  L 68 42 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.5"/>
+        <path d="M 68 42 L 78 14 L 88 42 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.5"/>
+        <path d="M 90 42 L 98 22 L 102 42 Z" fill="url(#crownGrad)" stroke="#8a6817" stroke-width="0.5"/>
+        <!-- Spire tips -->
+        <circle cx="22" cy="22" r="2.2" fill="#fff8d8" stroke="#8a6817" stroke-width="0.4"/>
+        <circle cx="42" cy="14" r="2.6" fill="#fff8d8" stroke="#8a6817" stroke-width="0.4"/>
+        <circle cx="60" cy="4"  r="3"   fill="#fff8d8" stroke="#8a6817" stroke-width="0.4"/>
+        <circle cx="78" cy="14" r="2.6" fill="#fff8d8" stroke="#8a6817" stroke-width="0.4"/>
+        <circle cx="98" cy="22" r="2.2" fill="#fff8d8" stroke="#8a6817" stroke-width="0.4"/>
+      </svg>
+    </div>
+
+    <!-- Bismillah -->
+    <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+    <!-- Sender ribbon -->
+    <div class="from-ribbon">
+      <div class="lbl">عيدية مهداة من</div>
+      <div class="name">عبد الحميد أبو لين</div>
+    </div>
+
+    <!-- Rotating Glass Mandala (multiple Islamic shapes) -->
+    <div class="mandala-wrap">
+      <!-- Layer 1: outer pearl ring, slow CW -->
+      <div class="mandala-layer l1">
+        <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="0" cy="0" r="88" fill="none" stroke="rgba(184,138,30,0.30)" stroke-width="0.5"/>
+          <g fill="rgba(255,255,255,0.7)" stroke="rgba(184,138,30,0.7)" stroke-width="0.5">
+            <circle cx="0" cy="-88" r="3.5"/>
+            <circle cx="44" cy="-76.2" r="3.5"/>
+            <circle cx="76.2" cy="-44" r="3.5"/>
+            <circle cx="88" cy="0" r="3.5"/>
+            <circle cx="76.2" cy="44" r="3.5"/>
+            <circle cx="44" cy="76.2" r="3.5"/>
+            <circle cx="0" cy="88" r="3.5"/>
+            <circle cx="-44" cy="76.2" r="3.5"/>
+            <circle cx="-76.2" cy="44" r="3.5"/>
+            <circle cx="-88" cy="0" r="3.5"/>
+            <circle cx="-76.2" cy="-44" r="3.5"/>
+            <circle cx="-44" cy="-76.2" r="3.5"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Layer 2: 12-petal rosette, CCW -->
+      <div class="mandala-layer l2">
+        <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="rgba(255,255,255,0.22)" stroke="rgba(212,169,58,0.7)" stroke-width="1">
+            <g transform="rotate(0)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(30)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(60)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(90)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(120)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(150)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(180)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(210)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(240)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(270)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(300)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+            <g transform="rotate(330)"><ellipse cx="0" cy="-52" rx="9" ry="28"/></g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Layer 3: octagonal frame (Islamic geometric), CW fast -->
+      <div class="mandala-layer l3">
+        <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="58,0 41,41 0,58 -41,41 -58,0 -41,-41 0,-58 41,-41"
+                   fill="rgba(255,255,255,0.30)" stroke="rgba(255,255,255,0.88)" stroke-width="1.4"/>
+          <polygon points="42,0 29.7,29.7 0,42 -29.7,29.7 -42,0 -29.7,-29.7 0,-42 29.7,-29.7"
+                   fill="none" stroke="rgba(184,138,30,0.6)" stroke-width="0.7"/>
+        </svg>
+      </div>
+
+      <!-- Layer 4: hairline tick marks, slowest CCW -->
+      <div class="mandala-layer l4">
+        <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="rgba(184,138,30,0.55)" stroke-width="0.7">
+            <line x1="0" y1="-97" x2="0" y2="-92"/>
+            <line x1="48.5" y1="-84" x2="46" y2="-79.7"/>
+            <line x1="84" y1="-48.5" x2="79.7" y2="-46"/>
+            <line x1="97" y1="0" x2="92" y2="0"/>
+            <line x1="84" y1="48.5" x2="79.7" y2="46"/>
+            <line x1="48.5" y1="84" x2="46" y2="79.7"/>
+            <line x1="0" y1="97" x2="0" y2="92"/>
+            <line x1="-48.5" y1="84" x2="-46" y2="79.7"/>
+            <line x1="-84" y1="48.5" x2="-79.7" y2="46"/>
+            <line x1="-97" y1="0" x2="-92" y2="0"/>
+            <line x1="-84" y1="-48.5" x2="-79.7" y2="-46"/>
+            <line x1="-48.5" y1="-84" x2="-46" y2="-79.7"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Static glass shine (light doesn't rotate) -->
+      <div class="mandala-shine"></div>
+
+      <!-- Static center text -->
+      <div class="mandala-center">
+        <div class="m-id">EID · MUBARAK</div>
+        <div class="m-eid">عيدٌ مبارك</div>
+        <div class="m-hjri">١٤٤٧</div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="label-small">عيدُ الأضحى المبارك</div>
+      <h1 class="title">عيدٌ مبارك</h1>
+      <div class="subtitle">و كلُّ عامٍ وأنتم بألفِ خير</div>
+    </div>
+
+    <div class="divider">
+      <span class="ln"></span><span class="star">✦</span><span class="ln"></span>
+    </div>
+
+    <!-- Letter (concise edition) -->
+    <p class="salam">السلامُ عليكم ورحمةُ اللهِ وبركاتُه</p>
+
+    <p class="stanza">
+      <strong>تَقَبَّلَ اللهُ منَّا ومنكم</strong><br>
+      صالحَ الأعمالِ والطاعات،<br>
+      وأَضاحِيَ المُضَحِّين، وحَجَّ الحاجِّين،<br>
+      وغَفَرَ لنا ولكم ما تَقَدَّمَ وما تَأخَّر.
+    </p>
+
+    <div class="stanza-sep">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="currentColor">
+          <rect x="5" y="5" width="14" height="14"/>
+          <rect x="5" y="5" width="14" height="14" transform="rotate(45 12 12)"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="stanza">
+      <strong>كلُّ عامٍ وأنتم بِخَير،</strong><br>
+      وأنتم إلى اللهِ أَقرَب،<br>
+      وبَيتُكم عامِرٌ بالمَحبَّةِ والرَّحمة،<br>
+      وأَيَّامُكم خيرٌ من سابِقاتِها.
+    </p>
+
+    <p class="flourish">عيدُكم مُبارَك ✦ وأيَّامُكم مُسَرَّة</p>
+
+    <svg class="mosque-art" viewBox="0 0 440 120" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="mg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%"   stop-color="#2a1850" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#0a0e27" stop-opacity="0.95"/>
+        </linearGradient>
+      </defs>
+      <rect x="50" y="48" width="14" height="72" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.8"/>
+      <path d="M 47 48 L 57 28 L 67 48 Z" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.8"/>
+      <circle cx="57" cy="26" r="2.5" fill="#d4a93a"/>
+      <line x1="57" y1="23" x2="57" y2="14" stroke="#d4a93a" stroke-width="1"/>
+      <path d="M 57 14 Q 61 12 61 8 Q 57 10 57 14" fill="#d4a93a"/>
+
+      <rect x="376" y="48" width="14" height="72" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.8"/>
+      <path d="M 373 48 L 383 28 L 393 48 Z" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.8"/>
+      <circle cx="383" cy="26" r="2.5" fill="#d4a93a"/>
+      <line x1="383" y1="23" x2="383" y2="14" stroke="#d4a93a" stroke-width="1"/>
+      <path d="M 383 14 Q 387 12 387 8 Q 383 10 383 14" fill="#d4a93a"/>
+
+      <rect x="100" y="72" width="240" height="48" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.8"/>
+      <path d="M 148 72 Q 148 32 220 32 Q 292 32 292 72 Z" fill="url(#mg)" stroke="#d4a93a" stroke-width="1"/>
+      <circle cx="220" cy="32" r="2.5" fill="#d4a93a"/>
+      <line x1="220" y1="29" x2="220" y2="20" stroke="#d4a93a" stroke-width="1"/>
+      <path d="M 220 20 Q 224 18 224 14 Q 220 16 220 20" fill="#d4a93a"/>
+
+      <path d="M 116 72 Q 116 56 134 56 Q 152 56 152 72 Z" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.7"/>
+      <line x1="134" y1="56" x2="134" y2="49" stroke="#d4a93a" stroke-width="0.7"/>
+      <path d="M 288 72 Q 288 56 306 56 Q 324 56 324 72 Z" fill="url(#mg)" stroke="#d4a93a" stroke-width="0.7"/>
+      <line x1="306" y1="56" x2="306" y2="49" stroke="#d4a93a" stroke-width="0.7"/>
+
+      <path d="M 208 120 L 208 96 Q 208 84 220 84 Q 232 84 232 96 L 232 120 Z" fill="#0a0e27" stroke="#d4a93a" stroke-width="0.8"/>
+      <path d="M 168 110 L 168 96 Q 168 88 176 88 Q 184 88 184 96 L 184 110 Z" fill="#0a0e27" stroke="#d4a93a" stroke-width="0.5" opacity="0.8"/>
+      <path d="M 256 110 L 256 96 Q 256 88 264 88 Q 272 88 272 96 L 272 110 Z" fill="#0a0e27" stroke="#d4a93a" stroke-width="0.5" opacity="0.8"/>
+    </svg>
+
+    <div class="signature">
+      <div class="lbl">مع أصدقِ التهاني وأخلصِ الدعوات</div>
+      <div class="name">عبد الحميد أبو لين</div>
+      <div class="ornament">✦ ✦ ✦</div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  const starsCanvas = document.getElementById('stars');
+  const starsCtx = starsCanvas.getContext('2d');
+  const particlesCanvas = document.getElementById('particles');
+  const particlesCtx = particlesCanvas.getContext('2d');
+  let stars = [];
+  let particles = [];
+  const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+
+  function resize() {
+    [starsCanvas, particlesCanvas].forEach(c => {
+      c.width  = innerWidth  * dpr;
+      c.height = innerHeight * dpr;
+      c.style.width  = innerWidth + 'px';
+      c.style.height = innerHeight + 'px';
+      c.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
+    });
+    initStars();
+  }
+
+  function initStars() {
+    stars = [];
+    const count = Math.min(220, Math.floor((innerWidth * innerHeight) / 6500));
+    for (let i = 0; i < count; i++) {
+      const layer = Math.random() < 0.6 ? 0 : (Math.random() < 0.7 ? 1 : 2);
+      stars.push({
+        x: Math.random() * innerWidth,
+        y: Math.random() * innerHeight,
+        r: layer === 2 ? Math.random() * 1.6 + 0.8 : layer === 1 ? Math.random() * 1.2 + 0.4 : Math.random() * 0.7 + 0.2,
+        baseA: 0.3 + Math.random() * 0.7,
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.4 + Math.random() * 1.6,
+        layer,
+        hue: Math.random() < 0.15 ? 1 : 0
+      });
+    }
+  }
+
+  let mouseX = 0, mouseY = 0;
+  let targetMouseX = 0, targetMouseY = 0;
+  addEventListener('mousemove', (e) => {
+    targetMouseX = (e.clientX / innerWidth  - 0.5) * 2;
+    targetMouseY = (e.clientY / innerHeight - 0.5) * 2;
+  });
+  addEventListener('deviceorientation', (e) => {
+    if (e.gamma != null && e.beta != null) {
+      targetMouseX = Math.max(-1, Math.min(1, e.gamma / 30));
+      targetMouseY = Math.max(-1, Math.min(1, e.beta  / 45));
+    }
+  });
+
+  function drawStars(t) {
+    mouseX += (targetMouseX - mouseX) * 0.04;
+    mouseY += (targetMouseY - mouseY) * 0.04;
+    starsCtx.clearRect(0, 0, innerWidth, innerHeight);
+    for (const s of stars) {
+      const par = (s.layer + 1) * 6;
+      const x = s.x - mouseX * par;
+      const y = s.y - mouseY * par;
+      const a = s.baseA * (0.55 + 0.45 * Math.sin(t * 0.001 * s.speed + s.phase));
+      starsCtx.beginPath();
+      starsCtx.fillStyle = s.hue ? `rgba(255, 231, 163, ${a})` : `rgba(255, 255, 255, ${a})`;
+      starsCtx.arc(x, y, s.r, 0, Math.PI * 2);
+      starsCtx.fill();
+      if (s.layer === 2) {
+        starsCtx.shadowBlur = 6;
+        starsCtx.shadowColor = s.hue ? 'rgba(255, 231, 163, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+        starsCtx.fill();
+        starsCtx.shadowBlur = 0;
+      }
+    }
+  }
+
+  function spawnParticle() {
+    particles.push({
+      x: Math.random() * innerWidth,
+      y: innerHeight + 10,
+      r: Math.random() * 1.6 + 0.6,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -(Math.random() * 0.6 + 0.2),
+      a: 0,
+      maxA: Math.random() * 0.5 + 0.2,
+      life: 0,
+      maxLife: 400 + Math.random() * 400,
+      drift: Math.random() * Math.PI * 2,
+      driftSpeed: 0.01 + Math.random() * 0.02
+    });
+  }
+
+  function drawParticles() {
+    particlesCtx.clearRect(0, 0, innerWidth, innerHeight);
+    if (Math.random() < 0.35 && particles.length < 70) spawnParticle();
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life++;
+      p.drift += p.driftSpeed;
+      p.x += p.vx + Math.sin(p.drift) * 0.25;
+      p.y += p.vy;
+      if      (p.life < 80)               p.a = (p.life / 80) * p.maxA;
+      else if (p.life > p.maxLife - 80)   p.a = ((p.maxLife - p.life) / 80) * p.maxA;
+      else                                p.a = p.maxA;
+      if (p.life > p.maxLife || p.y < -10) { particles.splice(i, 1); continue; }
+      particlesCtx.beginPath();
+      particlesCtx.fillStyle = `rgba(244, 208, 107, ${p.a})`;
+      particlesCtx.shadowBlur = 10;
+      particlesCtx.shadowColor = `rgba(244, 208, 107, ${p.a * 0.8})`;
+      particlesCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      particlesCtx.fill();
+      particlesCtx.shadowBlur = 0;
+    }
+  }
+
+  function loop(t) {
+    drawStars(t);
+    drawParticles();
+    requestAnimationFrame(loop);
+  }
+
+  addEventListener('resize', resize);
+  resize();
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
